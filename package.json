@@ -11,6 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@unocss/preset-attributify": "^0.46.5",
+    "rome": "10.0.1-nightly.40f10a4",
     "typescript": "^4.9.3",
     "unocss": "^0.46.5",
     "vite": "^3.2.4",
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.46.5",
+    "blive-message-listener": "^0.4.0",
     "solid-js": "^1.6.2"
   }
 }

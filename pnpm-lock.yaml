@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@unocss/preset-attributify': ^0.46.5
   '@unocss/reset': ^0.46.5
+  blive-message-listener: ^0.4.0
+  rome: 10.0.1-nightly.40f10a4
   solid-js: ^1.6.2
   typescript: ^4.9.3
   unocss: ^0.46.5
@@ -11,10 +13,12 @@ specifiers:
 
 dependencies:
   '@unocss/reset': 0.46.5
+  blive-message-listener: 0.4.0
   solid-js: 1.6.2
 
 devDependencies:
   '@unocss/preset-attributify': 0.46.5
+  rome: 10.0.1-nightly.40f10a4
   typescript: 4.9.3
   unocss: 0.46.5_vite@3.2.4
   vite: 3.2.4
@@ -452,6 +456,54 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@rometools/cli-darwin-arm64/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-L0B+55bil+Fq+FbY6VKrA1HlevDSc7CRiHCZUkJzpSfeAkJfYzpuT8TJKIMoMvlbl8HUXem8sE4WLt2LUKLBPQ==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-darwin-x64/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-N3dmZuOIeWyNZI7i7Q7dH1Px7kF+g32udsVkicYR679IeY9opmSJ08MkpTuNvhOJC7OdYVlgs4J0Lwp8wP0gNA==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-linux-arm64/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-SrjB7Pu+gscHp/bcdDQeR5FeURYtJQQlfLxmDjE8KygM8FaSedxY0X2cd5oq8OAfYywYgDnrvx098zV8mDKZsA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-linux-x64/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-XxUT/E+4MCdQvkF5jSKkXnyakwBJ0OMq/w8GOzmm+9GVENL9nKTyPQ3GZ47ao2fxjxMR8TqdcSIxniyz9SLLVg==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-win32-arm64/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-qEJGdzbF1TA1uJH5xF17ssfyi83LJLxMW+kDuJERNxUNPJ06NkEhogi5wuA1aG8M7ebI/1YnmZyzFjxgCN+FuA==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rometools/cli-win32-x64/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-MxF05Tqo/opFxR/btfD4uy+yHxMh5t/GcFmRPiTPJPN7mGViUqM7Mwh8addTh0xe/6DxDhZCsbbRw2bFiqNYiw==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
@@ -654,6 +706,15 @@ packages:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
     dev: true
+
+  /blive-message-listener/0.4.0:
+    resolution: {integrity: sha512-JiKwtl8zxOqvYs6fvjYu5mvC9BuNX8UJOaCRiOj146UfGFQJoTxEJVh49U4OjmEl9EFR+JN3KzMhve51uDFCug==}
+    dependencies:
+      tiny-bilibili-ws: 0.0.5
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
 
   /braces/3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
@@ -1009,6 +1070,10 @@ packages:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: true
 
+  /eventemitter3/4.0.7:
+    resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
+    dev: false
+
   /execa/5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -1305,6 +1370,10 @@ packages:
       p-limit: 3.1.0
     dev: true
 
+  /pako/2.1.0:
+    resolution: {integrity: sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==}
+    dev: false
+
   /path-exists/4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
@@ -1376,6 +1445,20 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /rome/10.0.1-nightly.40f10a4:
+    resolution: {integrity: sha512-3FOaMjNorZGk2PmDjruWpIcCOdDaNJGw16eCpeAb1UgBIcPON1bU9/S6EaE8PGXeiO8U7rkCdpJL+PZUE2lZMA==}
+    engines: {node: '>=14.*'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@rometools/cli-darwin-arm64': 10.0.1-nightly.40f10a4
+      '@rometools/cli-darwin-x64': 10.0.1-nightly.40f10a4
+      '@rometools/cli-linux-arm64': 10.0.1-nightly.40f10a4
+      '@rometools/cli-linux-x64': 10.0.1-nightly.40f10a4
+      '@rometools/cli-win32-arm64': 10.0.1-nightly.40f10a4
+      '@rometools/cli-win32-x64': 10.0.1-nightly.40f10a4
     dev: true
 
   /run-parallel/1.2.0:
@@ -1464,6 +1547,17 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /tiny-bilibili-ws/0.0.5:
+    resolution: {integrity: sha512-MRJfp4h2BOuJE05RGEXP+chVa+6xlvKZXFVKWrXW+B50kuF5R4q0sX6P6ZzRS3gV8rsXCKgdWI9vk5DvbUkGHw==}
+    dependencies:
+      eventemitter3: 4.0.7
+      pako: 2.1.0
+      ws: 8.11.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
 
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
@@ -1623,6 +1717,19 @@ packages:
     dependencies:
       isexe: 2.0.0
     dev: true
+
+  /ws/8.11.0:
+    resolution: {integrity: sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false
 
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}

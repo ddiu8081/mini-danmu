@@ -9,7 +9,21 @@ body {
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+  
+}
+
+.list {
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.uname {
+  font-family: 'Smiley Sans', sans-serif;
+  font-size: 22px;
+}
+
+.content {
+  font-size: 22px;
 }
