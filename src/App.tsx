@@ -7,6 +7,9 @@ import { Item } from './components/Item'
 let listDom: HTMLDivElement
 const [danmuList, setDanmuList] = createSignal<DanmuMsg[]>([])
 
+// get query params
+const urlParams = new URLSearchParams(window.location.search)
+const roomId = ~~(urlParams.get('room') || 652581)
 const handler: MsgHandler = {
   onIncomeDanmu: (msg) => {
     setDanmuList((list) => [...list, msg.body])
@@ -19,7 +22,7 @@ const handler: MsgHandler = {
   },
 }
 
-const instance = startListen(652581, handler)
+const instance = startListen(roomId, handler)
 
 const App: Component = () => {
   return (

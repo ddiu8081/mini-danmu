@@ -1,3 +1,9 @@
-# App
+# Mini danmu
 
-> Work in progress! 
+Minimal danmu client for bilibili.
+
+## Usage
+
+```
+https://danmu.ddiu.io/?room={room_id}
+```
