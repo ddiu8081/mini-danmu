@@ -5,6 +5,7 @@ import type { MsgHandler, DanmuMsg } from 'blive-message-listener'
 import { Item } from './components/Item'
 
 let listDom: HTMLDivElement
+const lifeTime = 15000
 const [danmuList, setDanmuList] = createSignal<DanmuMsg[]>([])
 
 // get query params
@@ -18,7 +19,7 @@ const handler: MsgHandler = {
     }, 10)
     setTimeout(() => {
       setDanmuList((list) => list.slice(1))
-    }, 15000)
+    }, lifeTime)
   },
 }
 
@@ -35,7 +36,7 @@ const App: Component = () => {
         <div flex-1 />
         <For each={danmuList()}>
           {(item) => (
-            <Item data={item} />
+            <Item data={item} lifeTime={lifeTime} />
           )}
         </For>
       </main>
