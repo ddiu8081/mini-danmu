@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js'
 import { createSignal } from 'solid-js'
 import { A } from '@solidjs/router'
-import { useStorage } from './utils/useStorage'
+import { useStorage } from '../utils/useStorage'
 
 const Settings: Component = () => {
   const [room, setRoom] = createSignal('')

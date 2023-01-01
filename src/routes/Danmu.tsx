@@ -2,7 +2,7 @@ import { For, createSignal } from 'solid-js'
 import type { Component } from 'solid-js'
 import { startListen } from 'blive-message-listener/browser'
 import type { DanmuMsg, MsgHandler } from 'blive-message-listener'
-import { Item } from './components/Item'
+import { Item } from '../components/Item'
 let listDom: HTMLDivElement
 const lifeTime = 15000
 const [danmuList, setDanmuList] = createSignal<DanmuMsg[]>([])

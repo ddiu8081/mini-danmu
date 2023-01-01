@@ -1,8 +1,8 @@
 import type { Component } from 'solid-js'
 import { Route, Routes } from '@solidjs/router'
 
-import { Settings } from './Settings'
-import { Danmu } from './Danmu'
+import { Settings } from './routes/Settings'
+import { Danmu } from './routes/Danmu'
 
 const App: Component = () => {
   return (
