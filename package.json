@@ -1,5 +1,5 @@
 {
-  "name": "vite-template-solid",
+  "name": "mini-danmu-web",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@solidjs/router": "^0.6.0",
     "@unocss/preset-attributify": "^0.46.5",
     "rome": "10.0.1-nightly.40f10a4",
     "typescript": "^4.9.3",

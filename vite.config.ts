@@ -13,6 +13,10 @@ export default defineConfig({
         presetUno(),
         presetAttributify(),
       ],
+      shortcuts: [
+        ['btn', 'rounded no-underline px-4 py-2'],
+        ['pxy', 'px-4 py-2'],
+      ],
     }),
   ],
   build: {

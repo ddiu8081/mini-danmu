@@ -14,18 +14,20 @@ export const Item: Component<Props> = ({ data, lifeTime }) => {
     setAnimation('')
   }, 200)
   setTimeout(() => {
-    setAnimation(`1s fade-out`)
+    setAnimation('1s fade-out')
   }, t - 1000)
 
   return (
-    <div 
-      my-3 style={{animation: animation()}}
+    <div
+      my-3 style={{ animation: animation() }}
     >
-      <div class="uname" text="#66b395">{ data.user.uname }</div>
+      <div class="uname" text="#66b395">{data.user.uname}</div>
       <div class="content" text="truegray-300" mt-2>
-      { data.emoticon ? (
-        <img src={data.emoticon?.url} height={data.emoticon.height / 2} width={data.emoticon.width / 2} alt={data.content} />
-      ) : data.content }
+        {data.emoticon
+          ? (
+            <img src={data.emoticon?.url} height={data.emoticon.height / 2} width={data.emoticon.width / 2} alt={data.content} />
+            )
+          : data.content}
       </div>
     </div>
   )

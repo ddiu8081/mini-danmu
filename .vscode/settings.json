@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
     "Danmu"
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 }
