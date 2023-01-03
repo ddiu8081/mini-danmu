@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@solidjs/router': ^0.6.0
   '@unocss/preset-attributify': ^0.46.5
   '@unocss/reset': ^0.46.5
   '@widcardw/eslint-config': ^0.2.4
@@ -20,7 +19,6 @@ dependencies:
   solid-js: 1.6.2
 
 devDependencies:
-  '@solidjs/router': 0.6.0_solid-js@1.6.2
   '@unocss/preset-attributify': 0.46.5
   '@widcardw/eslint-config': 0.2.4_p4cjf2r47dnfiqufepc5hp43sq
   eslint: 8.31.0
@@ -650,14 +648,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@solidjs/router/0.6.0_solid-js@1.6.2:
-    resolution: {integrity: sha512-7ug2fzXXhvvDBL4CQyMvMM9o3dgBE6PoRh38T8UTmMnYz4rcCfROqSZc9yq+YEC96qWt5OvJgZ1Uj/4EAQXlfA==}
-    peerDependencies:
-      solid-js: ^1.5.3
-    dependencies:
-      solid-js: 1.6.2
-    dev: true
 
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}

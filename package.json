@@ -10,7 +10,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@solidjs/router": "^0.6.0",
     "@unocss/preset-attributify": "^0.46.5",
     "@widcardw/eslint-config": "^0.2.4",
     "eslint": "^8.31.0",

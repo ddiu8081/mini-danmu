@@ -1,6 +1,6 @@
 import type { Accessor, Component, Setter } from 'solid-js'
 import { createSignal } from 'solid-js'
-import { A } from '@solidjs/router'
+// import { A } from '@solidjs/router'
 import { useStorage } from '../utils/useStorage'
 
 const Settings: Component = () => {
@@ -48,12 +48,12 @@ const Settings: Component = () => {
         <label block py-2>
           <input type="checkbox" checked={superchat()} onChange={ev => onValueChange(ev, setSuperchat, superchat, 'superchat')} />启用醒目留言
         </label>
-        <A
+        <a
           class="btn block w-100% pxy bg-blue hover:bg-blue-5 text-white text-center"
           border="~ rounded gray-200 dark:gray-700"
-          href={`/${room()}/${lottery()}/${superchat()}`}
+          href={`/?room=${room()}&lottery=${lottery()}&superchat=${superchat()}`}
         >Go
-        </A>
+        </a>
       </main>
     </>
   )
