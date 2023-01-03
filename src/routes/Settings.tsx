@@ -1,4 +1,4 @@
-import type { Component } from 'solid-js'
+import type { Accessor, Component, Setter } from 'solid-js'
 import { createSignal } from 'solid-js'
 import { A } from '@solidjs/router'
 import { useStorage } from '../utils/useStorage'
@@ -6,23 +6,29 @@ import { useStorage } from '../utils/useStorage'
 const Settings: Component = () => {
   const [room, setRoom] = createSignal('')
   const [lottery, setLottery] = createSignal(false)
+  const [superchat, setSuperchat] = createSignal(true)
 
   const cachedRoom = useStorage<string>('room')
-  const cachedLottery = useStorage<string>('lottery')
+  const cachedLottery = useStorage<boolean>('lottery')
+  const cachedSuperchat = useStorage<boolean>('superchat')
+
   if (cachedRoom)
     setRoom(cachedRoom)
   if (cachedLottery)
     setLottery(true)
+  if (cachedSuperchat)
+    setSuperchat(true)
 
   const onRoomChange = (ev: Event) => {
     setRoom((ev.target as HTMLInputElement).value)
     useStorage('room', room())
   }
 
-  const onLotteryChange = (ev: Event) => {
-    setLottery((ev.target as HTMLInputElement).checked)
-    useStorage('lottery', lottery())
+  const onValueChange = (ev: Event, setter: Setter<boolean>, accessor: Accessor<boolean>, key: string) => {
+    setter((ev.target as HTMLInputElement).checked)
+    useStorage(key, accessor())
   }
+
   return (
     <>
       <main w-10rem mx-a my-2rem space-y-2>
@@ -37,12 +43,15 @@ const Settings: Component = () => {
           onChange={onRoomChange}
         />
         <label block py-2>
-          <input type="checkbox" checked={lottery()} onChange={onLotteryChange} />允许抽奖弹幕
+          <input type="checkbox" checked={lottery()} onChange={ev => onValueChange(ev, setLottery, lottery, 'lottery')} />允许抽奖弹幕
+        </label>
+        <label block py-2>
+          <input type="checkbox" checked={superchat()} onChange={ev => onValueChange(ev, setSuperchat, superchat, 'superchat')} />启用醒目留言
         </label>
         <A
           class="btn block w-100% pxy bg-blue hover:bg-blue-5 text-white text-center"
           border="~ rounded gray-200 dark:gray-700"
-          href={`/danmu/?room=${room()}&lottery=${lottery()}`}
+          href={`/${room()}/${lottery()}/${superchat()}`}
         >Go
         </A>
       </main>

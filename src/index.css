@@ -14,7 +14,6 @@ body {
 }
 
 .list {
-  height: 100vh;
   color: #fff;
   overflow: hidden;
   scroll-behavior: smooth;

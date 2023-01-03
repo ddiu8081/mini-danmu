@@ -9,7 +9,7 @@ const App: Component = () => {
     <>
       <Routes>
         <Route path='/' component={Settings} />
-        <Route path='/danmu' component={Danmu} />
+        <Route path='/:room/:lottery/:superchat' component={Danmu} />
       </Routes>
     </>
   )

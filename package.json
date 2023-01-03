@@ -12,6 +12,8 @@
   "devDependencies": {
     "@solidjs/router": "^0.6.0",
     "@unocss/preset-attributify": "^0.46.5",
+    "@widcardw/eslint-config": "^0.2.4",
+    "eslint": "^8.31.0",
     "rome": "10.0.1-nightly.40f10a4",
     "typescript": "^4.9.3",
     "unocss": "^0.46.5",
@@ -22,5 +24,8 @@
     "@unocss/reset": "^0.46.5",
     "blive-message-listener": "^0.4.0",
     "solid-js": "^1.6.2"
+  },
+  "eslintConfig": {
+    "extends": "@widcardw"
   }
 }
