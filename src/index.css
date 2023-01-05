@@ -10,11 +10,10 @@ body {
 }
 
 #root {
-  
+  width: 100%;
 }
 
 .list {
-  height: 100vh;
   color: #fff;
   overflow: hidden;
   scroll-behavior: smooth;
@@ -27,4 +26,22 @@ body {
 
 .content {
   font-size: 22px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

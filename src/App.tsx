@@ -1,44 +1,30 @@
-import { For, createSignal, createEffect } from 'solid-js'
 import type { Component } from 'solid-js'
-import { startListen } from 'blive-message-listener/browser'
-import type { MsgHandler, DanmuMsg } from 'blive-message-listener'
-import { Item } from './components/Item'
+import { Match, Switch } from 'solid-js'
 
-let listDom: HTMLDivElement
-const [danmuList, setDanmuList] = createSignal<DanmuMsg[]>([])
-
-// get query params
-const urlParams = new URLSearchParams(window.location.search)
-const roomId = ~~(urlParams.get('room') || 652581)
-const handler: MsgHandler = {
-  onIncomeDanmu: (msg) => {
-    setDanmuList((list) => [...list, msg.body])
-    setTimeout(() => {
-      listDom && (listDom.scrollTop = listDom.scrollHeight)
-    }, 10)
-    setTimeout(() => {
-      setDanmuList((list) => list.slice(1))
-    }, 15000)
-  },
-}
-
-const instance = startListen(roomId, handler)
+import { Settings } from './routes/Settings'
+import { Danmu } from './routes/Danmu'
 
 const App: Component = () => {
+  const url = window.location.search
+  const urlParams = new URLSearchParams(url)
+  const roomParam = urlParams.get('room')
+  const lotteryParam = urlParams.get('lottery')
+  const superchatParam = urlParams.get('superchat')
+
+  const enableLottery: boolean = lotteryParam === null ? false : (JSON.parse(lotteryParam) || false)
+  const enableSuperchat: boolean = superchatParam === null ? false : (JSON.parse(superchatParam) || true)
+
+  const roomId = ~~(Number(roomParam) || 652581)
   return (
     <>
-      <main
-        class="list"
-        ref={listDom!}
-        flex flex-col
-      >
-        <div flex-1 />
-        <For each={danmuList()}>
-          {(item) => (
-            <Item data={item} />
-          )}
-        </For>
-      </main>
+      <Switch>
+        <Match when={roomParam === null}>
+          <Settings />
+        </Match>
+        <Match when={roomParam !== null}>
+          <Danmu roomId={roomId} lottery={enableLottery} superchat={enableSuperchat} />
+        </Match>
+      </Switch>
     </>
   )
 }
