@@ -47,9 +47,9 @@ const Danmu: Component<{
         class="list"
         h-100vh
         ref={listDom!}
-        flex flex-col
+        overflow-hidden
       >
-        <div flex-1 />
+        <div h-screen />
         <For each={danmuList()}>
           {item => (
             <Item data={item} lifeTime={lifeTime} />
